@@ -97,8 +97,34 @@ engajamento = seguidores × 2 + soma das curtidas dos seus posts
 - Use um algoritmo **O(n log n) implementado por você**: Merge Sort, Quick Sort ou Heap Sort.
 - Mostre os 20 primeiros colocados e a posição de um usuário informado, se quiser.
 
-### 3.7 Bônus (opcional): comunidades fortes
-`COMUNIDADES_FORTES`: considerando o grafo **dirigido**, encontre os **componentes fortemente conexos** com Tarjan ou Kosaraju. Em um componente desses, cada usuário alcança todos os outros seguindo as setas. Compare os resultados com os do item 3.3.
+### 3.7 Bônus (opcional): API de consulta via linha de comando
+**Depois** de concluir os itens 3.1 a 3.6, transforme o programa em uma **API de linha de comando**. Assim, qualquer consulta é feita em uma única chamada no terminal, sem menu interativo:
+
+```bash
+python3 py/main.py buscar @ana_silva
+python3 py/main.py sugerir @ana_silva 5
+python3 py/main.py comunidades
+python3 py/main.py posts-entre 2025-03-01 2025-03-31
+python3 py/main.py top-seguidos 10
+python3 py/main.py top-curtidos 10
+python3 py/main.py ranking --limite 20
+python3 py/main.py sugerir @ana_silva 5 --json
+python3 py/main.py ajuda
+```
+
+Em JavaScript, os mesmos comandos funcionam com `node js/main.js ...`.
+
+Requisitos:
+- **Todas** as funcionalidades de 3.1 a 3.6 ficam acessíveis por argumentos.
+- **Ajuda:** `ajuda`, ou um comando inválido, lista os comandos, os parâmetros de cada um e um exemplo de uso.
+- **Saída em JSON:** a opção `--json` troca a saída legível por **JSON válido**, para outro programa consumir o resultado. Exemplo: `python3 py/main.py top-seguidos 3 --json > saida.json`.
+- **Erros:**
+  - parâmetros faltando ou inválidos (data mal formatada, `k` não numérico, usuário inexistente) geram uma mensagem clara;
+  - em caso de erro, o programa termina com **código de saída diferente de 0**: `sys.exit(1)` em Python, `process.exit(1)` em JS;
+  - em caso de sucesso, o código de saída é 0.
+- **Restrição:** a API só **usa** as estruturas que você implementou. As regras da seção 4 continuam valendo.
+- **Ferramentas permitidas:** para ler os argumentos, você pode usar `sys.argv` ou `argparse` em Python, e `process.argv` em JS.
+- **Relatório:** documente a API, com uma tabela de comandos e exemplos de chamada com a saída obtida, e explique como você organizou o código para separar as estruturas da interface.
 
 ---
 
@@ -155,7 +181,7 @@ Na dupla, identifique os dois integrantes no início do relatório.
 | 3.5 Heap (TOP_SEGUIDOS / TOP_CURTIDOS) | 10% |
 | 3.6 Ordenação O(n log n) (RANKING) | 10% |
 | Documentação (seção 5) | 15% |
-| Bônus 3.7 | +10% |
+| Bônus 3.7 (API via CLI) | +10% |
 
 Na correção, além de o programa funcionar, contam a **organização do código**, a **corretude das estruturas** (por exemplo, se a AVL se mantém balanceada) e a **clareza das justificativas**.
 
