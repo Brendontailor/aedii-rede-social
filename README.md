@@ -170,19 +170,18 @@ Na dupla, identifique os dois integrantes no início do relatório.
 
 ---
 
-## 7. Critérios de avaliação (sugestão de pesos)
+## 7. Critérios de avaliação
 
-| Item | Peso |
-|------|------|
-| 3.1 Tabela hash (BUSCAR) | 15% |
-| 3.2 Grafo + heap (SUGERIR) | 15% |
-| 3.3 Componentes conexos (COMUNIDADES) | 15% |
-| 3.4 AVL + consulta por intervalo (POSTS_ENTRE) | 20% |
-| 3.5 Heap (TOP_SEGUIDOS / TOP_CURTIDOS) | 10% |
-| 3.6 Ordenação O(n log n) (RANKING) | 10% |
-| Documentação (seção 5) | 15% |
-| Bônus 3.7 (API via CLI) | +10% |
+A avaliação é por **conceito (A, B, C ou D)** e considera:
 
-Na correção, além de o programa funcionar, contam a **organização do código**, a **corretude das estruturas** (por exemplo, se a AVL se mantém balanceada) e a **clareza das justificativas**.
+- completude do código;
+- clareza da explicação de métodos, funções e classes;
+- documentação;
+- entrega no prazo;
+- bônus.
+
+> **O conceito A exige o bônus (item 3.7).**
+
+Os critérios completos e o que é exigido para cada conceito estão em **[AVALIACAO.md](AVALIACAO.md)**. Leia esse arquivo antes de começar.
 
 Bom trabalho!
