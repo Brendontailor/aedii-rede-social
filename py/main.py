@@ -10,7 +10,7 @@ import aedlib  # biblioteca base do projeto (obrigatória - não remova)
 
 
 def main():
-    usuarios, seguidores, posts = aedlib.rs_carregar_dados()
+    usuarios, seguidores, posts = aedlib.social_carregar_dados()
     # usuarios:   [id, usuario, nome, data_cadastro]
     # seguidores: [seguidor, seguido]
     # posts:      [id, autor, data, curtidas, texto]

@@ -9,7 +9,7 @@
 const aedlib = require("./aedlib"); // biblioteca base do projeto (obrigatória - não remova)
 
 function main() {
-  const [usuarios, seguidores, posts] = aedlib.rsCarregarDados();
+  const [usuarios, seguidores, posts] = aedlib.socialCarregarDados();
   // usuarios:   [id, usuario, nome, data_cadastro]
   // seguidores: [seguidor, seguido]
   // posts:      [id, autor, data, curtidas, texto]
